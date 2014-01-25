@@ -60,21 +60,6 @@ def main():
 	my_json = RottenTomatoes.getSimilarMoviesText(movie_id = "770672122")
 	parsed = json.loads(my_json)
 	print json.dumps(parsed, indent=4, sort_keys=True)
-	#print type(parsed)
-	print type(parsed['movies'])
-	print ("This is the start of movies")
-	count = 1
-	for value in parsed['movies']:
-		print value,"\n"
-		print type (value), "\n"
-		print ("Movie "+str(count))
-		count = count + 1
-		for smaller_key,smaller_value in value.items():
-			print smaller_value, "\n"
-		
-	#print json.dumps(parsed, indent=4, sort_keys=True)
-    #print RottenTomatoes.getMoviesJSON(query_terms = "star", page = 10)
-    #print "\n"
     
 
 
